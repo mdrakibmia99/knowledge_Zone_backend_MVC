@@ -1,0 +1,9 @@
+{
+  "name": "knowledge_Zone_backend_MVC",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/mdrakibmia99/knowledge_Zone_backend_MVC",
+  "author": "Md Rakib Mia",
+  "license": "MIT",
+  "private": true
+}
