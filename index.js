@@ -13,7 +13,7 @@ const stripe = require("stripe")(process.env.PAYMENT_SECRET_KEY);
 app.use(cors());
 app.use(express.json());
 
-dbConnect()
+const client=dbConnect()
 
 function verifyJwt(req, res, next) {
   const authHeader = req.headers.authorization;
