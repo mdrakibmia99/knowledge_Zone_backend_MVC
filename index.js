@@ -5,6 +5,7 @@ require("dotenv").config();
 const app = express();
 const jwt = require("jsonwebtoken");
 const dbConnect = require("./utils/dbConnect");
+const courseRouter=require('./routes/v1/course.route')
 const port = process.env.PORT || 5000;
 const stripe = require("stripe")(process.env.PAYMENT_SECRET_KEY);
 
@@ -14,7 +15,7 @@ app.use(cors());
 app.use(express.json());
 
 const client=dbConnect()
-
+app.use('/api/v1/courses',courseRouter)
 function verifyJwt(req, res, next) {
   const authHeader = req.headers.authorization;
   if (!authHeader) {
